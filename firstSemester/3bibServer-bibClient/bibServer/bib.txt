@@ -1,0 +1,6 @@
+001;pushkin;omegin;1825;yes
+002;apushkin;lukomor'e;1820;no
+003;pukina;adsosn;1222;no
+004;push;nodasd;13;yes
+005;pusopush;aod;111;no
+006;puuupus;moo;111;yes

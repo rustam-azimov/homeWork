@@ -1,0 +1,3 @@
+b:3:aba:fa
+a:2:baba:fc
+c:1:acdc:fb

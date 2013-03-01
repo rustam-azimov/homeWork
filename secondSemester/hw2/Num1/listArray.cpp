@@ -1,5 +1,7 @@
 #include "listArray.h"
 
+using namespace std;
+
 ArrayList::ArrayList() {
     arraySize = 50;
     arrayCounter = 0;
@@ -8,8 +10,8 @@ ArrayList::ArrayList() {
         arrayList[i] = new int[2];
     }
     for (int i = 0; i < arraySize; i++) {
-    arrayList[i][0] = 0;
-    arrayList[i][1] = -1;
+        arrayList[i][0] = 0;
+        arrayList[i][1] = -1;
     }
     arrayList[0][0] = -1;
     arrayList[0][1] = 0;

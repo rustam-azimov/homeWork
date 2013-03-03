@@ -1,4 +1,5 @@
-#include "pointerstack.h"
+#include "pointerStack.h"
+
 #include <cstdlib>
 #include <iostream>
 

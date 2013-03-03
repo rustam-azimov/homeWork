@@ -1,4 +1,5 @@
-#include "Parser.h"
+#include "parser.h"
+
 #include <iostream>
 
 Parser::Parser(char *ch) {

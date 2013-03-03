@@ -1,6 +1,6 @@
 /*#pragma once
 
-#include "Stack.h"
+#include "stack.h"
 
 class ArrayStack : public Stack {
 public:

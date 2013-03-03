@@ -1,4 +1,4 @@
-/*#include "arraystack.h"
+/*#include "arrayStack.h"
 
 ArrayStack::ArrayStack() {
     arraySize = 50;

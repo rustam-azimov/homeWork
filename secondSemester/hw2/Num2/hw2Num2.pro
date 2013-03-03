@@ -3,13 +3,13 @@ CONFIG += console
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    arraystack.cpp \
-    pointerstack.cpp \
-    parser.cpp
+    parser.cpp \
+    arrayStack.cpp \
+    pointerStack.cpp
 
 HEADERS += \
-    Stack.h \
-    arraystack.h \
-    pointerstack.h \
-    parser.h
+    parser.h \
+    arrayStack.h \
+    pointerStack.h \
+    stack.h
 

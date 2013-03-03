@@ -1,11 +1,7 @@
 #pragma once
 
-#include "Stack.h"
+#include "stack.h"
 
-struct Node {
-    char value;
-    Node* next;
-};
 
 class PointerStack : public Stack {
 public:
@@ -16,6 +12,10 @@ public:
     bool isEmpty();
     char top();
 protected:
+    struct Node {
+        char value;
+        Node* next;
+    };
     int nodeCounter;
     Node* head;
 };

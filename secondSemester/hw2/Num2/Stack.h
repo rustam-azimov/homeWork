@@ -7,4 +7,5 @@ public:
     virtual void pop() = 0;
     virtual bool isEmpty() = 0;
     virtual char top() = 0;
+    virtual ~Stack() {}
 };

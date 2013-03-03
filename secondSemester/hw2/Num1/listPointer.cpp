@@ -1,4 +1,4 @@
-#include "listpointer.h"
+#include "listPointer.h"
 #include <cstdlib>
 #include <iostream>
 
@@ -11,10 +11,7 @@ ListPointer::ListPointer() {
 }
 
 bool ListPointer::isEmpty() {
-    if(head->next == NULL) {
-        return true;
-    }
-    return false;
+    return (head->next == NULL);
 }
 
 void ListPointer::addValueInPos(int value, int position) {
@@ -86,5 +83,4 @@ ListPointer::~ListPointer() {
         delete head;
         head = temp;
     }
-    delete &nodeCounter;
 }

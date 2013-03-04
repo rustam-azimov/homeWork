@@ -5,11 +5,13 @@ CONFIG -= qt
 SOURCES += main.cpp \
     parser.cpp \
     arrayStack.cpp \
-    pointerStack.cpp
+    pointerStack.cpp \
+    calculator.cpp
 
 HEADERS += \
     parser.h \
     arrayStack.h \
     pointerStack.h \
-    stack.h
+    stack.h \
+    calculator.h
 

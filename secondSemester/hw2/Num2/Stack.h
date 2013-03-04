@@ -1,11 +1,16 @@
 #pragma once
 
-class Stack
-{
+enum StackType {
+    array = 1,
+    pointer = 2
+};
+
+class Stack {
 public:
-    virtual void push(char value) = 0;
+    Stack() {}
+    virtual void push(double value) = 0;
     virtual void pop() = 0;
-    virtual bool isEmpty() = 0;
-    virtual char top() = 0;
+    virtual double top() const = 0;
+    virtual bool isEmpty() const = 0;
     virtual ~Stack() {}
 };

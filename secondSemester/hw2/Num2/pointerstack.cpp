@@ -1,5 +1,5 @@
 #include "pointerStack.h"
-
+#include <climits>
 #include <cstdlib>
 #include <iostream>
 
@@ -20,11 +20,11 @@ PointerStack::~PointerStack() {
     }
 }
 
-bool PointerStack::isEmpty() {
+bool PointerStack::isEmpty() const {
     return(head->next == NULL);
 }
 
-void PointerStack::push(char value) {
+void PointerStack::push(double value) {
     Node* addElement = new Node;
     addElement->value = value;
     addElement->next = head->next;
@@ -43,10 +43,10 @@ void PointerStack::pop() {
     nodeCounter--;
 }
 
-char PointerStack::top() {
+double PointerStack::top() const {
     if(isEmpty()){
-        cout << "List is empty!" << endl;
-        return '!';
+        cout << "List is empty!";
+        return INT_MAX;
     }
     return(head->next->value);
 }

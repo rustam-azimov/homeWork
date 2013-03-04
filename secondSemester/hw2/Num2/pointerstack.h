@@ -7,13 +7,13 @@ class PointerStack : public Stack {
 public:
     PointerStack();
     ~PointerStack();
-    void push(char value);
+    void push(double value);
     void pop();
-    bool isEmpty();
-    char top();
+    bool isEmpty() const;
+    double top() const;
 protected:
     struct Node {
-        char value;
+        double value;
         Node* next;
     };
     int nodeCounter;

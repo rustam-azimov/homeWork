@@ -1,20 +1,19 @@
-/*#pragma once
+#pragma once
 
 #include "stack.h"
 
-class ArrayStack : public Stack {
+class ArrayStack: public Stack {
 public:
     ArrayStack();
-    ~ArrayStack();
-    void push(char value);
+    void push(double value);
     void pop();
-    bool isEmpty();
-    char top();
+    double top() const;
+    bool isEmpty() const;
+    ~ArrayStack();
 protected:
-    int arraySize;
+    double **arrayStack;
     int arrayCounter;
-    int **arrayList;
-    int findHole();
+    int arraySize;
+    int findHole() const;
     void increaseArray();
 };
-*/

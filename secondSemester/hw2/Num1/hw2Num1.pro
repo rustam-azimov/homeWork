@@ -4,11 +4,11 @@ CONFIG -= qt
 
 SOURCES += \
     listArray.cpp \
-    listpointer.cpp \
-    main.cpp
+    main.cpp \
+    listPointer.cpp
 
 HEADERS += \
     listArray.h \
     list.h \
-    listpointer.h
+    listPointer.h
 

@@ -1,5 +1,5 @@
 #include "listArray.h"
-#include "listpointer.h"
+#include "listPointer.h"
 
 #include <iostream>
 

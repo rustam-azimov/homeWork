@@ -22,5 +22,6 @@ public:
      * This method takes left and right limits and sorting by quick sort.
      * @param first - holds number of left limit.
      * @param last - holds number of right limit.
+     */
     void qSort(int first, int last);
 };

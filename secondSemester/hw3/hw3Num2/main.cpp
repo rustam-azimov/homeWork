@@ -5,6 +5,16 @@
 
 using namespace std;
 
+ /**
+  * @file main.cpp
+  * @author Azimov Rustam <rustam.azimov19021995@gmail.com>
+  *
+  * @section DESCRIPTION
+  *
+  * This program allows to output on the console elements of a square matrix,
+  * the desired size (odd), in a spiral from the center.
+  */
+
 int main() {
     cout << "Enter the matrix size (odd) ";
     int size;

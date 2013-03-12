@@ -37,9 +37,9 @@ private:
     /// whose elements - elements of the original matrix.
     int** array;
     /** This method takes a number of two columns and compares
-      * the first column with the second.
-      * Returns true if they need to be swapped, false if they dont.
-      */
+     * the first column with the second.
+     * Returns true if they need to be swapped, false if they dont.
+     */
     bool needToSwap(int colum1, int colum2);
     /// This method takes a number of two columns and swap element's value of these columns.
     void swap(int colum1, int colum2);

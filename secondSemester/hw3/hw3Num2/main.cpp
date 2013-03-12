@@ -28,7 +28,7 @@ int main() {
     cout << "File output ('output.txt')" << endl;
     SpiralOutput* fileObject = new FileOutput(userMatrix, size);
     fileObject->print();
-    for (int i = 1; i <= size; i++)
+    for (int i = 0; i <= size; i++)
         delete[] userMatrix[i];
     delete[] userMatrix;
     delete consoleObject;

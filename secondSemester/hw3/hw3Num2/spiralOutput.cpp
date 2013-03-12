@@ -16,7 +16,7 @@ SpiralOutput::SpiralOutput(int **inputMatrix, int size) {
 }
 
 SpiralOutput::~SpiralOutput() {
-    for (int i = 0; i < matrixSize; i++)
+    for (int i = 0; i <= matrixSize; i++)
         delete[] matrix[i];
     delete[] matrix;
     delete[] spiralArray;

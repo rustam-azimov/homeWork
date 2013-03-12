@@ -29,5 +29,9 @@ int main() {
     qsort->sort();
     cout << "Sorted Quick sort:" << endl;
     qsort->print();
+    delete[] arrayUser;
+    delete bsort;
+    delete dsort;
+    delete qsort;
     return 0;
 }

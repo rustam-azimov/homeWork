@@ -18,9 +18,15 @@ public:
     ~Widget();
     
 private:
-    QSignalMapper *signalMapper;
+    QSignalMapper* signalMapperNumb;
+    QSignalMapper* signalMapperOpr;
+    QString currentNumb;
+    QString lastNumb;
+    QString currentOpr;
+    bool needToChangeNumb;
     Ui::Widget *ui;
 private slots:
-    void clicked(const QString & numberStr);
-    //void calculate(const QString & numberStr);
+    void clickedNumb(const QString& numberStr);
+    void clickedOpr(const QString& oprStr);
+    void calculate();
 };

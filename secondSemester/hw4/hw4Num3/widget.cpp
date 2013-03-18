@@ -99,24 +99,8 @@ void Widget::calculate() {
         float leftValue = leftNumb.toFloat();
         float rightValue = rightNumb.toFloat();
         float result = 0;
-        switch ((char)*currentOpr.toLatin1()) {
-        case '+': {
-            result = leftValue + rightValue;
-            break;
-        }
-        case '-': {
-            result = leftValue - rightValue;
-            break;
-        }
-        case '*': {
-            result = leftValue * rightValue;
-            break;
-        }
-        case '/': {
-            result = leftValue / rightValue;
-            break;
-        }
-        }
+        char opr = (char)*currentOpr.toLatin1();
+        result = calculator.calculate(leftValue, opr, rightValue);
         if (result == (int)result) {
             isHaveDot = false;
         }

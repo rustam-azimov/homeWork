@@ -1,4 +1,5 @@
 #pragma once
+#include "calculator.h"
 
  /**
  * @file widget.h
@@ -25,6 +26,7 @@ public:
     ~Widget();
     
 private:
+    Calculator calculator;
     QSignalMapper* signalMapperNumb;
     QSignalMapper* signalMapperOpr;
     /// @param rightNumb - right operand number.

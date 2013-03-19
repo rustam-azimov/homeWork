@@ -1,4 +1,5 @@
 #pragma once
+#include <QString>
 
 /**
 * @file widget.h
@@ -11,5 +12,14 @@
 class Calculator {
 public:
     Calculator();
-    float calculate(float leftValue, char opr, float rightValue);
+    void clear();
+    void changeExpresion(QString expr);
+    void calculate();
+    QString expression;
+private:
+    bool isHaveDot;
+    bool needToChangeNumb;
+    QString rightNumb;
+    QString leftNumb;
+    QString currentOpr;
 };

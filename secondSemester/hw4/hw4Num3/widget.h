@@ -27,22 +27,11 @@ public:
     
 private:
     Calculator calculator;
-    QSignalMapper* signalMapperNumb;
-    QSignalMapper* signalMapperOpr;
-    /// @param rightNumb - right operand number.
-    QString rightNumb;
-    /// @param leftNumb - left operand number.
-    QString leftNumb;
-    /// @param currentOpr - current operator.
-    QString currentOpr;
-    bool needToChangeNumb;
-    bool isHaveDot;
+    QSignalMapper* signalMapper;
     Ui::Widget *ui;
 private slots:
     /// Return all parameters in they start states.
     void clear();
-    void clickedNumb(const QString& numberStr);
-    void clickedOpr(const QString& oprStr);
-    void clickedDot();
+    void clicked(const QString& str);
     void calculate();
 };

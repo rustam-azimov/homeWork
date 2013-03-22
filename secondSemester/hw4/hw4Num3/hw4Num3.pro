@@ -9,12 +9,14 @@ QT       += core gui
 TARGET = hw4Num3
 TEMPLATE = app
 
+CONFIG += qtestlib
 
 SOURCES += main.cpp\
         widget.cpp \
     calculator.cpp
 
 HEADERS  += widget.h \
-    calculator.h
+    calculator.h \
+    calculatorTest.h
 
 FORMS    += widget.ui

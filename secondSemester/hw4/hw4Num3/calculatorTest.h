@@ -48,4 +48,4 @@ private:
     Calculator* calculator;
 };
 
-QTEST_MAIN(CalculatorTest)
+//QTEST_MAIN(CalculatorTest)

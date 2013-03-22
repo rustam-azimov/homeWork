@@ -1,5 +1,6 @@
 #include <QtGui/QApplication>
 #include "widget.h"
+#include "calculatorTest.h"
 
  /**
  * @file main.cpp

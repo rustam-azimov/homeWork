@@ -1,10 +1,15 @@
+QT += core \
+    testlib
+
+QT -= gui
+
 TEMPLATE = app
 CONFIG += console
-CONFIG -= qt
 
 SOURCES += main.cpp \
     matrixForSort.cpp
 
 HEADERS += \
-    matrixForSort.h
+    matrixForSort.h \
+    sorterTest.h
 

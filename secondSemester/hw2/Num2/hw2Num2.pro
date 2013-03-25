@@ -1,6 +1,6 @@
 TEMPLATE = app
-CONFIG += console
-CONFIG -= qt
+CONFIG += console \
+qtestlib
 
 SOURCES += main.cpp \
     parser.cpp \
@@ -13,5 +13,7 @@ HEADERS += \
     arrayStack.h \
     pointerStack.h \
     stack.h \
-    calculator.h
+    calculator.h \
+    stackTest.h \
+    calculatorTest.h
 

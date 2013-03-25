@@ -1,14 +1,16 @@
-#include "pointerStack.h"
-#include "arrayStack.h"
-#include "parser.h"
-#include "calculator.h"
 #include <iostream>
 #include <cstdlib>
+#include "calculatorTest.h"
+#include "stackTest.h"
 
 using namespace std;
 
 int main()
 {
+    /*StackTest stackTest;
+    QTest::qExec(&stackTest);
+    CalculatorTest calcTest;
+    QTest::qExec(&calcTest);*/
     cout << "The cacluator program." << endl;
     int type;
     while (true) {

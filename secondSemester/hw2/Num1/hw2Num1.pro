@@ -1,6 +1,6 @@
 TEMPLATE = app
-CONFIG += console
-CONFIG -= qt
+CONFIG += console \
+qtestlib
 
 SOURCES += \
     listArray.cpp \
@@ -10,5 +10,6 @@ SOURCES += \
 HEADERS += \
     listArray.h \
     list.h \
-    listPointer.h
+    listPointer.h \
+    listTest.h
 

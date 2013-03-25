@@ -13,7 +13,7 @@ class Sorter {
 public:
     /** Constructor - create array with user's size and values.
      * @param inputArray - user's array.
-     * @param size - user' size of the array.
+     * @param size - user's size of the array.
      */
     Sorter(int *inputArray, int size);
     /// Abstract sort function.
@@ -22,6 +22,9 @@ public:
     /// separating the elements of the array by spaces.
     void print();
     /// Virtual destructor.
+    int* returnArray() {
+        return array;
+    }
     virtual ~Sorter();
  protected:
     /// This field is array, whose elements -

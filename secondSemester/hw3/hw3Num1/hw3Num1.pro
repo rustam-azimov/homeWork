@@ -1,6 +1,15 @@
-TEMPLATE = app
+
+QT += core \
+    testlib
+
+QT -= gui
+
+TARGET = sorter
 CONFIG += console
-CONFIG -= qt
+CONFIG -= app_bundle
+
+TEMPLATE = app
+
 
 SOURCES += main.cpp \
     sorter.cpp \
@@ -12,5 +21,6 @@ HEADERS += \
     sorter.h \
     bubbleSort.h \
     quickSort.h \
-    dwarfSort.h
+    dwarfSort.h \
+    sorterTest.h
 

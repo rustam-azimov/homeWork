@@ -1,9 +1,16 @@
 #include <QtCore/QCoreApplication>
-#include "testBinaryTree.h"
+#include "testMySet.h"
+
+/**
+ * @file main.cpp
+ *
+ * Program to work with set.
+ * Contains implementation of container class Set and tests.
+ */
 
 int main()
 {
-    TestBinaryTree test;
+    TestMySet test;
     QTest::qExec(&test);
     return 0;
 }

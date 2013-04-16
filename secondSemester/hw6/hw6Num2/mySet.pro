@@ -8,7 +8,7 @@ QT       += core
 
 QT       -= gui
 
-TARGET = hw6Num2
+TARGET = mySet
 CONFIG   += console \
 qtestlib
 
@@ -20,6 +20,5 @@ TEMPLATE = app
 SOURCES += main.cpp
 
 HEADERS += \
-    testBinaryTree.h \
-    binaryTree.h \
-    balancedTree.h
+    mySet.h \
+    testMySet.h

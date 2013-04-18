@@ -29,7 +29,8 @@ Widget::Widget(QWidget *parent) :
 
 Widget::~Widget()
 {
-    delete[] buttons;
+    for (int i = 0; i < numOfButtons; i++)
+        delete buttons[i];
     delete endButton;
     delete signalMapper;
     delete ui;

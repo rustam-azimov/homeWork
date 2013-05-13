@@ -10,13 +10,13 @@ MyVector::MyVector(const int &dimension):
     }
 }
 
-MyVector::MyVector(const MyVector *otherVector):
-    myDimension(otherVector->myDimension)
+MyVector::MyVector(const MyVector &otherVector):
+    myDimension(otherVector.myDimension)
 {
     vector = new double[myDimension];
     for (int i = 0; i < myDimension; i++)
     {
-        vector[i] = otherVector->vector[i];
+        vector[i] = otherVector.vector[i];
     }
 }
 

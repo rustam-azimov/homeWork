@@ -39,7 +39,7 @@ private slots:
     {
         myVector->setValueAtPosition(10, 2);
         myVector->setValueAtPosition(-5, 3);
-        MyVector otherVector(myVector);
+        MyVector otherVector(*myVector);
         (*myVector) += otherVector;
         QVERIFY(myVector->valueAtPosition(2) == 20);
         QVERIFY(myVector->valueAtPosition(3) == -10);
@@ -49,7 +49,7 @@ private slots:
     {
         myVector->setValueAtPosition(10, 2);
         myVector->setValueAtPosition(-5, 3);
-        MyVector otherVector(myVector);
+        MyVector otherVector(*myVector);
         (*myVector) -= otherVector;
         QVERIFY(myVector->isZeroVector());
     }
@@ -58,7 +58,7 @@ private slots:
     {
         myVector->setValueAtPosition(10, 2);
         myVector->setValueAtPosition(-5, 3);
-        MyVector otherVector(myVector);
+        MyVector otherVector(*myVector);
         QVERIFY(((*myVector) * otherVector == 125));
     }
 

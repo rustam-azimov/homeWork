@@ -12,7 +12,7 @@ public:
     /// Constructor with indicating dimension.
     MyVector(const int& dimension);
     /// Copy constructor.
-    MyVector(const MyVector* otherVector);
+    MyVector(const MyVector& otherVector);
     ~MyVector();
     /// Return true if all of values in array vector are equal to zero.
     /// Otherwise return false.

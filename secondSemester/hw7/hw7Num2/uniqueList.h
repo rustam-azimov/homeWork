@@ -1,6 +1,8 @@
 #ifndef UNIQUELIST_H
 #define UNIQUELIST_H
 
+#include "pointerList.h"
+
 /**
  * @file uniqueList.h
  *
@@ -26,86 +28,25 @@ namespace uniqueListException
 template <typename T>
 /// @class UniqueList
 /// @brief Contains implementation of unique list with functionality.
-class UniqueList
+class UniqueList: public PointerList<T>
 {
 public:
-    UniqueList():
-        list(NULL),
-        length(0)
-    {}
-
-    ~UniqueList();
-
     /// @throw uniqueListException::NotUniqueValue.
     void addInPos(T value, int position) throw(uniqueListException::NotUniqueValue);
-    void addLast(T value) { addInPos(value, length + 1); }
     void addFirst(T value) { addInPos(value, 1); }
-
-    int getLength() const { return length; }
-
-    bool isEmpty() { return list == NULL; }
-    bool isContained(T value) const;
+    void addLast(T value) { addInPos(value, PointerList<T>::length + 1); }
 
     /// @throw uniqueListException::NoSuchValue.
     void removeValue(T value) throw(uniqueListException::NoSuchValue);
-
-protected:
-    /// @struct ListElement
-    /// @brief Contains implementation of linked list.
-    struct ListElement
-    {
-        T value;
-        ListElement *next;
-
-        ListElement(ListElement * nextElement, T x) :
-            value(x),
-            next(nextElement)
-        {}
-    };
-    ListElement *list;
-    int length;
 };
-
-template <typename T>
-bool UniqueList<T>::isContained(T value) const
-{
-    ListElement *temp = list;
-    int counter = 1;
-
-    while (counter <= length)
-    {
-        if (temp->value == value)
-            return true;
-
-        temp = temp->next;
-        counter++;
-    }
-
-    return false;
-}
 
 template <typename T>
 void UniqueList<T>::addInPos(T value, int position) throw(uniqueListException::NotUniqueValue)
 {
-    if (isEmpty())
-    {
-        list = new ListElement(NULL, value);
-        length++;
-        return;
-    }
-
     if (isContained(value))
         throw uniqueListException::NotUniqueValue();
 
-    if (position > length)
-        position = length + 1;
-
-    ListElement *temp = list;
-    for (int i = 1; i < (position - 1); i++)
-        temp = temp->next;
-    ListElement *newElement = new ListElement(temp->next, value);
-    temp->next = newElement;
-    length++;
+    PointerList<T>::addInPos(value, position);
 }
 
 template <typename T>
@@ -116,40 +57,7 @@ void UniqueList<T>::removeValue(T value) throw(uniqueListException::NoSuchValue)
         throw uniqueListException::NoSuchValue();
     }
 
-    if (list->value == value)
-    {
-        ListElement *deletedElement = list;
-        list = list->next;
-        delete deletedElement;
-        length--;
-        return;
-    }
-
-    ListElement *temp = list;
-
-    while (temp->next->value != value)
-        temp = temp->next;
-
-    ListElement *deletedElement = temp->next;
-    temp->next = temp->next->next;
-
-    length--;
-    delete deletedElement;
+    PointerList<T>::removeValue(value);
 }
-
-template <typename T>
-UniqueList<T>::~UniqueList()
-{
-    ListElement *temp = list;
-    while (list)
-    {
-        temp = temp->next;
-        delete list;
-        list = temp;
-    }
-    delete list;
-}
-
-
 
 #endif // UNIQUELIST_H

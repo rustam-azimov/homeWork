@@ -20,4 +20,5 @@ SOURCES += \
 
 HEADERS += \
     uniqueList.h \
-    testUniqueList.h
+    testUniqueList.h \
+    pointerList.h

@@ -1,0 +1,8 @@
+*.pro.user
+Makefile
+Makefile.*
+*.o
+*.exe
+ui_*
+moc_*
+build*
